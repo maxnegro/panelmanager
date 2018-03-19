@@ -8,7 +8,7 @@ $this->title = Yii::$app->name;
     <div class="jumbotron">
         <h1>Panel Manager</h1>
 
-        <p class="lead">Applicazione in fase di test, vi preghiamo di segnalare eventuali malfunzionamenti.</p>
+        <p class="lead">Applicazione in fase di test, Vi preghiamo di segnalare eventuali malfunzionamenti.</p>
 
     </div>
 </div>

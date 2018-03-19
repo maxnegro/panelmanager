@@ -83,7 +83,7 @@ AppAsset::register($this);
 
 <footer class="footer">
     <div class="container">
-        <p class="pull-right"><?= Yii::powered() ?></p>
+        <p class="pull-right"><a href="http://www.el-tek.biz/" target="_blank">EL-TEK</a> - tecnologie ed esperienza al Vostro servizio</p>
     </div>
 </footer>
 
