@@ -1,0 +1,65 @@
+{
+    "name": "beaten-sect0r/yii2-core",
+    "description": "Yii2 Core project template",
+    "keywords": ["yii2", "framework", "advanced", "project template"],
+    "authors": [
+        {
+            "name": "Alexander Volkov",
+            "email": "beatensect0r@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "type": "project",
+    "license": "BSD-3-Clause",
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.4.0",
+        "yiisoft/yii2": "~2.0.14",
+        "yiisoft/yii2-bootstrap": "*",
+        "yiisoft/yii2-swiftmailer": "*",
+        "vlucas/phpdotenv": "*",
+        "beaten-sect0r/yii2-db-manager": "*",
+        "beaten-sect0r/yii2-flatpickr": "*",
+        "beaten-sect0r/yii2-phpsysinfo": "*",
+        "samdark/sitemap": "*",
+        "developeruz/yii2-db-rbac": "*",
+        "vova07/yii2-fileapi-widget": "*",
+        "creocoder/yii2-taggable": "*",
+        "2amigos/yii2-tinymce-widget": "*",
+        "2amigos/yii2-selectize-widget": "*",
+        "mihaildev/yii2-elfinder": "*",
+        "loveorigami/yii2-notification-wrapper": "*",
+        "bower-asset/admin-lte": "*",
+        "bower-asset/html5shiv": "*",
+        "bower-asset/timecircles": "*",
+        "bower-asset/font-awesome": "~4.7.0",
+        "bower-asset/open-sans-fontface": "*",
+        "bower-asset/highlightjs": "*",
+        "bower-asset/jquery-slimscroll": "*",
+        "bower-asset/no-vnc": "*"
+    },
+    "require-dev": {
+        "yiisoft/yii2-debug": "*",
+        "yiisoft/yii2-gii": "*",
+        "friendsofphp/php-cs-fixer": "*"
+    },
+    "scripts": {
+        "post-update-cmd": [
+            "php -r \"file_exists('.env') || copy('.env.dist', '.env');\""
+        ]
+    },
+    "config": {
+        "process-timeout": 1800,
+        "preferred-install": "dist",
+        "optimize-autoloader": true,
+        "fxp-asset": {
+            "enabled": false
+        }
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ]
+}
