@@ -61,7 +61,7 @@ if (YII_ENV_DEV) {
     ];
 }
 
-if (YII_ENV_PROD) {
+// if (YII_ENV_PROD) {
     // maintenance mode
     $config['bootstrap'] = ['maintenance'];
     $config['components']['maintenance'] = [
@@ -72,6 +72,6 @@ if (YII_ENV_PROD) {
         // year-month-day hour:minute:second
         'time' => env('MAINTENANCE_MODE_TIME'), // время окончания работ
     ];
-}
+// }
 
 return $config;
