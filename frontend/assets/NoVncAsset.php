@@ -11,10 +11,10 @@ class NoVncAsset extends AssetBundle
 {
   public $sourcePath = '@bower/no-vnc';
   public $css = [
-    // 'app/styles/lite.css',
+    'app/styles/lite.css',
   ];
   public $js = [
-    // 'vendor/promise.js',
+    'vendor/promise.js',
     // 'lib/rfb.js',
   ];
   public $depends = [

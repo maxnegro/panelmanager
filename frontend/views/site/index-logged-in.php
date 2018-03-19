@@ -1,6 +1,8 @@
 <?php
 use yii\grid\GridView;
 use yii\helpers\Html;
+use yii\helpers\Url;
+
 /* @var $this yii\web\View */
 
 $this->title = Yii::$app->name;
@@ -25,7 +27,7 @@ echo GridView::widget([
       'header' => Yii::t('frontend', 'Show Panel'),
       'buttons' => [
         'view' => function($url, $model) {
-          return Html::a('<span class="glyphicon glyphicon-fullscreen"></span>', $url, ['title'=>Yii::t('frontend', 'Open panel in new window'), 'target'=>'_new']);
+          return Html::a('<span class="glyphicon glyphicon-fullscreen"></span>', Url::to(['no-vnc/view', 'id'=>$model->id]), ['title'=>Yii::t('frontend', 'Open panel in new window'), 'target'=>'_new']);
         }
       ],
     ],
