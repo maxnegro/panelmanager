@@ -19,6 +19,7 @@
 return [
     'Active' => '',
     'Assigned panels' => '',
+    'Assigned users' => '',
     'Author' => 'Автор',
     'Avatar' => 'Аватар',
     'Banned' => '',
@@ -42,6 +43,7 @@ return [
     'Name' => 'Имя',
     'Name (admin view)' => '',
     'Name (user view)' => '@@@@',
+    'Open in new window' => '',
     'Other' => 'Прочее',
     'Panel Manager' => '',
     'Parent' => 'Родитель',
@@ -62,6 +64,7 @@ return [
     'Updater' => 'Обновивший',
     'Username' => 'Имя пользователя',
     'Username or email' => 'Имя пользователя или email',
+    'VNC Password' => '',
     'Value' => 'Значение',
     'Website' => 'Веб-сайт',
 ];

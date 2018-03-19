@@ -19,6 +19,7 @@
 return [
     'Active' => 'Attivo',
     'Assigned panels' => 'Pannelli assegnati',
+    'Assigned users' => 'Utenti assegnati',
     'Author' => 'Autore',
     'Avatar' => 'Avatar',
     'Banned' => 'Bandito',
@@ -42,6 +43,7 @@ return [
     'Name' => 'Nome',
     'Name (admin view)' => 'Nome (vista amministratore)',
     'Name (user view)' => '@@Nome (vista utente)@@',
+    'Open in new window' => 'Apri in una nuova finestra',
     'Other' => 'Altro',
     'Panel Manager' => 'Gestione Pannelli',
     'Parent' => 'Genitore',
@@ -62,6 +64,7 @@ return [
     'Updater' => 'Modificato da',
     'Username' => 'Nome utente',
     'Username or email' => 'Nome utente o email',
+    'VNC Password' => 'Password VNC',
     'Value' => 'Valore',
     'Website' => 'Sito web',
 ];

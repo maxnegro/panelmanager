@@ -14,7 +14,7 @@ use yii\bootstrap\Html;
 /* @var $roles yii\rbac\Role[] */
 /* @var $permissions yii\rbac\Permission[] */
 
-$this->title = Yii::t('backend', 'Update assigned users for panel: {username}', ['username' => $model->adminNameWithSite]);
+$this->title = Yii::t('backend', 'Update assigned users for panel: {panel}', ['panel' => $model->adminNameWithSite]);
 $this->params['breadcrumbs'][] = ['label' => Yii::t('backend', 'Panel users'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = Yii::t('backend', 'Update');
 ?>
