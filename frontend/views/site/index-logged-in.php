@@ -6,8 +6,6 @@ use yii\helpers\Url;
 /* @var $this yii\web\View */
 
 $this->title = Yii::$app->name;
-// use frontend\assets\NoVncAsset;
-// $asset = NoVncAsset::register($this);
 ?>
 <div class="site-index">
     <div class="jumbotron">
