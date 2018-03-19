@@ -220,7 +220,7 @@ This file is licensed under the 2-Clause BSD license (see LICENSE.txt).
             rfb.addEventListener("credentialsrequired", credentials);
             rfb.addEventListener("desktopname", updateDesktopName);
             rfb.scaleViewport = WebUtil.getConfigVar('scale', true);
-            rfb.resizeSession = WebUtil.getConfigVar('resize', false);
+            rfb.resizeSession = WebUtil.getConfigVar('resize', true);
         })();
     </script>
 
