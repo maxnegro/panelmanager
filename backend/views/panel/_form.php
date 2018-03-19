@@ -24,7 +24,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'port')->textInput() ?>
 
-    <?= $form->field($model, 'vncPassword')->textInput() ?>
+    <?= $form->field($model, 'vncPassword')->passwordInput() ?>
 
 
     <div class="form-group">
