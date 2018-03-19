@@ -41,7 +41,7 @@ This file is licensed under the 2-Clause BSD license (see LICENSE.txt).
     <?php $this->head() ?>
 
     <!-- Stylesheets -->
-    <!-- <link rel="stylesheet" href="app/styles/lite.css"> -->
+    <link rel="stylesheet" href="<?= $asset->baseUrl; ?>/app/styles/lite.css">
 
      <!--
     <script type='text/javascript'
@@ -49,7 +49,7 @@ This file is licensed under the 2-Clause BSD license (see LICENSE.txt).
     -->
 
     <!-- promise polyfills promises for IE11 -->
-    <!-- <script src="vendor/promise.js"></script> -->
+    <script src="<?= $asset->baseUrl; ?>vendor/promise.js"></script>
     <!-- ES2015/ES6 modules polyfill -->
     <script type="module">
         window._noVNC_has_module_support = true;
