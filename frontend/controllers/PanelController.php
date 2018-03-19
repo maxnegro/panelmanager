@@ -50,7 +50,7 @@ class PanelController extends Controller
         $socket->token = $token;
         $socket->ip = $panel->ipAddress;
         $socket->port = $panel->port;
-        $socket->validUntil = time()+300; // token is valid for 300 seconds after creation
+        $socket->validUntil = time()+30; // token is valid for 30 seconds after creation
         $socket->save();
 
         return $this->render('view-no-vnc', [
@@ -66,7 +66,8 @@ class PanelController extends Controller
         $webproxy->token = $token;
         $webproxy->ip = $panel->ipAddress;
         $webproxy->port = $panel->port;
-        $webproxy->validUntil = time()+300;
+        $webproxy->validUntil = time()+300; // token is valid for 30 seconds after creation
+                                            // Validity is extended on access by access control logic in Nginx
         $webproxy->save();
 
         return $this->render('view-http', [
