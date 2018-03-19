@@ -39,6 +39,7 @@ return [
     'Clear assets' => 'Pulisci asset',
     'Content' => 'Contenuto',
     'Create' => 'Crea',
+    'Create Panel' => 'Crea pannello',
     'Create article' => 'Crea articolo',
     'Create article category' => 'Crea categoria articolo',
     'Create item' => 'Crea oggetto',
