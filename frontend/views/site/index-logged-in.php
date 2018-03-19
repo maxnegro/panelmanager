@@ -31,7 +31,7 @@ echo GridView::widget([
             [
               'title'=>Yii::t('frontend', 'Open panel in new window'),
               'target'=>'_new',
-              'onclick' => sprintf('window.open(\'%s\',\'panel\',\'directories=no,titlebar=no,toolbar=no,location=no,status=no,menubar=no,width=800,height=600\'); return false;', Url::to(['panel/view', 'id'=>$model->id], true)),
+              'onclick' => sprintf('window.open(\'%s%s\',\'panel\',\'directories=no,titlebar=no,toolbar=no,location=no,status=no,menubar=no,width=800,height=600\'); return false;', Yii::getAlias('@frontendUrl'), Url::to(['panel/view', 'id'=>$model->id])),
             ]);
         }
       ],
