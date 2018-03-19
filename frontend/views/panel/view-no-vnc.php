@@ -232,7 +232,7 @@ This file is licensed under the 2-Clause BSD license (see LICENSE.txt).
   <div id="noVNC_status">Loading</div>
   <div id="noVNC_buttons">
     <input type=button value="Send CtrlAltDel"
-           id="sendCtrlAltDelButton" class="noVNC_shown">
+           id="sendCtrlAltDelButton" class="noVNC_hidden">
     <span id="noVNC_power_buttons" class="noVNC_hidden">
       <input type=button value="Shutdown"
              id="machineShutdownButton">
