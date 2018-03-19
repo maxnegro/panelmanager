@@ -15,9 +15,9 @@ use yii\base\Security;
 /**
  * Class SiteController.
  */
-class NoVncController extends Controller
+class PanelController extends Controller
 {
-    public $layout = 'novnc';
+    public $layout = 'custom';
 
     /**
      * @inheritdoc
