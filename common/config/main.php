@@ -53,6 +53,11 @@ $config = [
                     'basePath' => '@common/messages',
                     'sourceLanguage' => 'en-US',
                 ],
+                'db_rbac' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'basePath' => '@common/messages',
+                    'sourceLanguage' => 'ru_RU',
+                ],
                 'app' => [
                     'class' => 'yii\i18n\PhpMessageSource',
                     'basePath' => '@common/messages',
