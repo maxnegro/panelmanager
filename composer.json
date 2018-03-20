@@ -37,7 +37,7 @@
         "bower-asset/highlightjs": "*",
         "bower-asset/jquery-slimscroll": "*",
         "bower-asset/no-vnc": "*",
-        "ssimpson/yii2-opensslca": "*"
+        "maxnegro/yii2-opensslca": "master"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "*",
@@ -61,6 +61,10 @@
         {
             "type": "composer",
             "url": "https://asset-packagist.org"
+        },
+        {
+          "type": "vcs",
+          "url": "git@github.com:maxnegro/yii2-opensslca.git"
         }
     ]
 }
