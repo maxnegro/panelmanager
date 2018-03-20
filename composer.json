@@ -36,7 +36,8 @@
         "bower-asset/open-sans-fontface": "*",
         "bower-asset/highlightjs": "*",
         "bower-asset/jquery-slimscroll": "*",
-        "bower-asset/no-vnc": "*"
+        "bower-asset/no-vnc": "*",
+        "ssimpson/yii2-opensslca": "*"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "*",
