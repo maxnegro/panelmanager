@@ -6,7 +6,7 @@ use yii\console\Controller;
 use \app\models\core\Migration as CoreMigration;
 use \app\models\rt\Migration as RtMigration;
 use \app\models\sc\Migration as ScMigration;
-use ssimpson\opensslca\Opensslca;
+use maxnegro\opensslca\Opensslca;
 
 /**
  * This implements a minimal Certificate Authority using Opensslca
