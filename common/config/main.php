@@ -58,6 +58,11 @@ $config = [
                     'basePath' => '@common/messages',
                     'sourceLanguage' => 'ru_RU',
                 ],
+                'noty' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'basePath' => '@common/messages',
+                    'sourceLanguage' => 'ru_RU',
+                ],
                 'app' => [
                     'class' => 'yii\i18n\PhpMessageSource',
                     'basePath' => '@common/messages',
