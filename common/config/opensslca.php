@@ -3,7 +3,7 @@
 return [
     'class'    => 'maxnegro\opensslca\Opensslca',
     'password' => 'secret',
-    'ca_dir'   => '@app/../ca',
+    'ca_dir'   => '@root/ca',
     'dn_base'   => [
 	               'countryName'  => 'IT',
 	               'stateOrProvinceName' => 'FC',
