@@ -1,7 +1,7 @@
 <?php
 // @app/config/opensslca.php
 return [
-    'class'    => 'ssimpson\opensslca\Opensslca',
+    'class'    => 'maxnegro\opensslca\Opensslca',
     'password' => 'secret',
     'ca_dir'   => '@app/../ca',
     'dn_base'   => [

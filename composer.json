@@ -64,7 +64,7 @@
         },
         {
           "type": "vcs",
-          "url": "git@github.com:maxnegro/yii2-opensslca.git"
+          "url": "https://github.com/maxnegro/yii2-opensslca.git"
         }
     ]
 }
