@@ -3,7 +3,7 @@
 return [
     'class'    => 'ssimpson\opensslca\Opensslca',
     'password' => 'secret',
-    'ca_dir'   => '@root/ca',
+    'ca_dir'   => '@app/../ca',
     'dn_base'   => [
 	               'countryName'  => 'IT',
 	               'stateOrProvinceName' => 'FC',

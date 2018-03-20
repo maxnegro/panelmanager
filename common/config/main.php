@@ -96,6 +96,7 @@ $config = [
         'cache' => [
             'class' => YII_ENV_DEV ? 'yii\caching\DummyCache' : 'yii\caching\FileCache',
         ],
+        'opensslca' => require __DIR__ . '/opensslca.php',
     ],
 ];
 

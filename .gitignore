@@ -32,6 +32,9 @@ phpunit.phar
 
 # vagrant runtime
 /.vagrant
+
 *.log
 /phpmyadmin
+
+# openssl CA certs
 /ca

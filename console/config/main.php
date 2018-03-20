@@ -30,8 +30,5 @@ return [
             'dbList' => ['db'],
         ],
     ],
-    'components' => [
-      'opensslca' => require __DIR__ . '/opensslca.php',
-    ],
     'params' => $params,
 ];
