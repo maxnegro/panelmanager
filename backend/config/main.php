@@ -57,7 +57,7 @@ $config = [
         ],
         'urlManager' => require __DIR__ . '/_urlManager.php',
         'frontendCache' => require Yii::getAlias('@frontend/config/_cache.php'),
-        'opensslca' => require __DIR__ . './opensslca.php',
+        // 'opensslca' => require __DIR__ . './opensslca.php',
     ],
     'modules' => [
         'db-manager' => [
