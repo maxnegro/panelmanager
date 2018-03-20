@@ -140,6 +140,15 @@ $config = [
                 'allow' => false,
             ],
             [
+                'controllers' => ['panelwithusers'],
+                'allow' => true,
+                'roles' => ['administrator'],
+            ],
+            [
+                'controllers' => ['panelwithusers'],
+                'allow' => false,
+            ],
+            [
                 'allow' => true,
                 'roles' => ['manager'],
             ],
