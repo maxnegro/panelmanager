@@ -41,7 +41,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'ip',
             // 'created_at',
             // 'updated_at',
-            // 'action_at',
+            'action_at:datetime',
             [
               'label' => Yii::t('backend', 'Assigned Panels'),
               'value' => function ($model) { return $model->getUserPanels()->count(); },
@@ -51,13 +51,6 @@ $this->params['breadcrumbs'][] = $this->title;
                 'class' => 'yii\grid\ActionColumn',
                 'template' => '{update} {panels} {delete}',
                 'buttons' => [
-                  // 'update' => function($url) {
-                  //   return Html::a('<span class="glyphicon glyphicon-pencil"></span>',
-                  //   $url,
-                  //   [
-                  //     'title' => Yii::t('backend', 'Update'),
-                  //   ]);
-                  // },
                   'panels' => function($url, $model) {
                     return Html::a('<span class="glyphicon glyphicon-tasks"></span>',
                     ['/user-with-panels/update', 'id' => $model->id],
