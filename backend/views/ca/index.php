@@ -23,10 +23,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
-        // 'filterModel' => $searchModel,
         'columns' => [
-            // ['class' => 'yii\grid\SerialColumn'],
-
             'serialNumber',
             [
               'attribute' => 'organization',
@@ -43,12 +40,6 @@ $this->params['breadcrumbs'][] = $this->title;
               'label' => Yii::t('backend', 'Valid Until'),
               'value' => function($model) { return date('d/m/Y H:i:s', $model['validTo_time_t']); },
             ],
-            // 'subject',
-            // 'validTo_time_t',
-            // [
-            //   'label' => Yii::t('backend', 'Assigned Users'),
-            //   'value' => function ($model) { return $model->getUserPanels()->count(); },
-            // ],
             [
               'class' => 'yii\grid\ActionColumn',
               'template' => '{view} {revoke}',
@@ -63,14 +54,6 @@ $this->params['breadcrumbs'][] = $this->title;
                     ]
                   );
                 },
-              //   'users' => function($url, $model) {
-              //     return Html::a('<span class="glyphicon glyphicon-tasks"></span>',
-              //     ['/panel-with-users/update', 'id' => $model->id],
-              //     [
-              //       'title' => Yii::t('backend', 'User mapping'),
-              //       'data-pjax' => 0,
-              //     ]);
-              //   },
               ],
             ],
         ],
