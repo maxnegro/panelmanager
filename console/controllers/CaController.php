@@ -50,7 +50,7 @@ class CaController extends Controller
             $force = true;
         }
 
-        if ($ca->generateCetificateAuthority($force)) {
+        if ($ca->generateCertificateAuthority($force)) {
             echo "CA Created\n";
         } else {
             echo "Error creating CA, check logs.\n";
