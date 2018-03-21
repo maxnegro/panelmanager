@@ -83,7 +83,7 @@ class Panel extends \yii\db\ActiveRecord
      */
     public static function getAvailablePanels($isFrontend = true) {
       $nameField = $isFrontend ? 'userName' : 'adminName';
-      $panels = self::find()->orderBy(['site' => SORT_DESC, $nameField => SORT_DESC])->all();
+      $panels = self::find()->orderBy(['site' => SORT_ASC, $nameField => SORT_ASC])->all();
       $items = ArrayHelper::map($panels, 'id', $nameField . 'WithSite');
       return $items;
     }

@@ -252,7 +252,7 @@ class User extends ActiveRecord implements IdentityInterface
      * @return array available panels id => desc
      */
     public static function getAvailableUsers() {
-      $users = self::find()->orderBy(['username' => SORT_DESC])->all();
+      $users = self::find()->orderBy(['username' => SORT_ASC])->all();
       $items = ArrayHelper::map($users, 'id', 'username');
       return $items;
     }
