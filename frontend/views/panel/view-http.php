@@ -11,7 +11,7 @@ use yii\helpers\Html;
 
 $this->registerMetaTag([
   'http-equiv'=>'refresh',
-  'content' => sprintf('1; url=%s://%s:%d/%s', $scheme, $host, $port , $path),
+  'content' => sprintf('0; url=%s://%s:%d/%s', $scheme, $host, $port , $path),
 ]);
 ?>
 <!DOCTYPE html>
@@ -23,10 +23,10 @@ $this->registerMetaTag([
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
-  </head>
-  <body>
-  <?php $this->beginBody() ?>
-  <h1>Loading...</h1>
-  <?php $this->endBody() ?>
-  </body>
-  </html>
+</head>
+<body>
+<?php $this->beginBody() ?>
+<h1>Loading...</h1>
+<?php $this->endBody() ?>
+</body>
+</html>
