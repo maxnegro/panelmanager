@@ -39,7 +39,6 @@ class CaController extends Controller
       $certs = [];
       foreach (glob($ca->getCaDir() . "/certs/*") as $cert) {
         $certs[] = $ca->getCertInfo($cert);
-          // echo "  " . basename($cert) . ": " . $ca->getCertInfo($cert)['name'] ."\n";
       }
       return $this->render('index', [
         'dataProvider' => new ArrayDataProvider([
