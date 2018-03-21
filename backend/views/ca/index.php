@@ -19,8 +19,6 @@ $this->params['breadcrumbs'][] = $this->title;
         <?= Html::a(Yii::t('backend', 'New Certificate'), ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
-    <!-- <?= var_dump($dataProvider); ?> -->
-
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'columns' => [
