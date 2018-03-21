@@ -55,4 +55,20 @@ class CaController extends Controller
       ]);
     }
 
+    /**
+     * Display a certificate in human readable form
+     *
+     * @return mixed
+     */
+    public function actionView($id) {
+      $ca = \Yii::$app->opensslca;
+      $cert = $ca->getCert($id);
+      if (!$cert) {
+        throw new NotFoundHttpException(Yii::t('app', 'The requested page does not exist.'));
+      }
+      return $this->render('view',[
+        'cert' => $cert,
+        'certInfo' => $ca->getCertInfo($ca->getCertFile($id)),
+      ]);
+    }
 }
