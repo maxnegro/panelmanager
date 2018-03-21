@@ -71,6 +71,7 @@ class PanelController extends Controller
         $webproxy->save();
 
         return $this->render('view-http', [
+          'scheme' => Yii::getAlias('@httpProxyPort') == 443 ? 'https' : 'http',
           'host' => Yii::getAlias('@httpProxyHost'),
           'port' => Yii::getAlias('@httpProxyPort'),
           'path' => Yii::getAlias('@httpProxyPath') . '/' . $webproxy->token . '/',
