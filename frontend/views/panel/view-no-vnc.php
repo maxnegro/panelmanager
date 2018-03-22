@@ -2,7 +2,7 @@
 
 /* @var $this yii\web\View */
 
-$this->title = 'Panel VNC screen - ' . Yii::$app->name;
+$this->title = 'Panel VNC screen - ' . $panelName;
 
 use yii\web\View;
 use yii\helpers\ArrayHelper;
@@ -158,7 +158,7 @@ This file is licensed under the 2-Clause BSD license (see LICENSE.txt).
         document.getElementById('machineResetButton').onclick = machineReset;
 
         WebUtil.init_logging(WebUtil.getConfigVar('logging', 'warn'));
-        document.title = '<?= $panelName; ?>';
+        // document.title = '<?= $panelName; ?>';
         // By default, use the host and port of server that served this file
         var host = '<?= $host; ?>';
         var port = <?= $port; ?>;
