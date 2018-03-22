@@ -33,10 +33,12 @@ $this->params['breadcrumbs'][] = $this->title;
               'label' => Yii::t('backend', 'Common Name'),
               'value' => function($model) { return $model['subject']['CN']; },
             ],
+            // 'validTo_time_t:datetime:' . Yii::t('backend', 'Valid Until'),
             [
               'attribute' => 'validTo_time_t',
               'label' => Yii::t('backend', 'Valid Until'),
-              'value' => function($model) { return date('d/m/Y H:i:s', $model['validTo_time_t']); },
+              'format' => 'datetime'
+              // 'value' => function($model) { return date('d/m/Y H:i:s', $model['validTo_time_t']); },
             ],
             [
               'class' => 'yii\grid\ActionColumn',
