@@ -23,6 +23,25 @@ $config = [
             'cookieValidationKey' => env('BACKEND_COOKIE_VALIDATION_KEY'),
             'csrfParam' => '_csrf-frontend',
             'baseUrl' => '',
+            'trustedHosts' => [
+              '127.0.0.1/32' => [
+                'X-ProxyUser-Ip',
+                'Front-End-Https',
+              ],
+            ],
+            'secureHeaders' => [
+                'X-Forwarded-For',
+                'X-Forwarded-Host',
+                'X-Forwarded-Proto',
+                'X-Proxy-User-Ip',
+                'Front-End-Https',
+            ],
+            'ipHeaders' => [
+                'X-Proxy-User-Ip',
+            ],
+            'secureProtocolHeaders' => [
+                'Front-End-Https' => ['on']
+            ],
         ],
         'user' => [
             'identityClass' => 'common\models\User',
