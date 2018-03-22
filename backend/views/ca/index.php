@@ -21,6 +21,11 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
+        'rowOptions' => function($model) {
+          if ($model['serialNumber'] == 2) {
+            return ['class'=>'danger'];
+          }
+        },
         'columns' => [
             'serialNumber',
             [
@@ -33,16 +38,31 @@ $this->params['breadcrumbs'][] = $this->title;
               'label' => Yii::t('backend', 'Common Name'),
               'value' => function($model) { return $model['subject']['CN']; },
             ],
-            // 'validTo_time_t:datetime:' . Yii::t('backend', 'Valid Until'),
             [
               'attribute' => 'validTo_time_t',
               'label' => Yii::t('backend', 'Valid Until'),
               'format' => 'datetime'
-              // 'value' => function($model) { return date('d/m/Y H:i:s', $model['validTo_time_t']); },
+            ],
+            [
+              'attribute' => 'isValid',
+              'label' => Yii::t('backend', 'Valid Certificate'),
+              'value' => function($model) {
+                if ($model['serialNumber'] == 2) {
+                  return '<span class="glyphicon glyphicon-remove"></span>';
+                } else {
+                  return '<span class="glyphicon glyphicon-ok"></span>';
+                }
+              },
+              'format' => 'raw',
             ],
             [
               'class' => 'yii\grid\ActionColumn',
-              'template' => '{view} {revoke}',
+              'visibleButtons' => [
+                'view' => function ($model) { return $model['serialNumber'] != 2; },
+                'revoke' => function ($model) { return $model['serialNumber'] != 2; },
+                'download' => function ($model) { return $model['serialNumber'] != 2; },
+              ],
+              'template' => '{view} {revoke} {download}',
               'buttons' => [
                 'revoke' => function($url, $model) {
                   return Html::a(
@@ -50,6 +70,16 @@ $this->params['breadcrumbs'][] = $this->title;
                     ['revoke', 'id' => $model['serialNumber']],
                     [
                       'title' => Yii::t('backend', 'Revoke'),
+                      'data-pjax' => 0,
+                    ]
+                  );
+                },
+                'download' => function($url, $model) {
+                  return Html::a(
+                    '<span class="glyphicon glyphicon-download-alt"></span>',
+                    ['download', 'id' => $model['serialNumber']],
+                    [
+                      'title' => Yii::t('backend', 'Download'),
                       'data-pjax' => 0,
                     ]
                   );
