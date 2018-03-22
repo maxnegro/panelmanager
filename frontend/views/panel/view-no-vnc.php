@@ -2,7 +2,7 @@
 
 /* @var $this yii\web\View */
 
-$this->title = 'Panel VNC screen - ' . $panelName;
+$this->title = $panelName;
 
 use yii\web\View;
 use yii\helpers\ArrayHelper;
