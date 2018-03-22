@@ -2,7 +2,7 @@
 
 /* @var $this yii\web\View */
 
-$this->title = $panelName;
+$this->title = $panelName . ' - ' . Yii::$app->name;
 
 use yii\web\View;
 use yii\helpers\ArrayHelper;
