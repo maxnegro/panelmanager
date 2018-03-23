@@ -11,7 +11,7 @@ use yii\helpers\Html;
 
 $this->registerMetaTag([
   'http-equiv'=>'refresh',
-  'content' => sprintf('0; url=%s://%s:%d/%s', $scheme, $host, $port , $path),
+  'content' => sprintf('0; url=%s://%s:%d/%s?%s', $scheme, $host, $port , $path, $token),
 ]);
 ?>
 <!DOCTYPE html>

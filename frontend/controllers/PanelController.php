@@ -10,6 +10,7 @@ use common\models\UserPanel;
 use common\models\Websocket;
 use common\models\Webproxy;
 use yii\base\Security;
+use yii\web\Cookie;
 
 
 /**
@@ -70,11 +71,21 @@ class PanelController extends Controller
                                             // Validity is extended on access by access control logic in Nginx
         $webproxy->save();
 
+        // $cookie = new Cookie([
+        //   'name' => 'webproxyAuth',
+        //   'value' => $webproxy->token,
+        //   'expire' => time() + 300,
+        //   'domain' => ".yii2-core.loc",
+        // ]);
+        // Yii::$app->response->cookies->add($cookie);
+        setcookie('webproxyAuth', $token, time() + 300, '/', '.yii2-core.loc');
+
         return $this->render('view-http', [
           'scheme' => Yii::getAlias('@httpProxyPort') == 443 ? 'https' : 'http',
           'host' => Yii::getAlias('@httpProxyHost'),
           'port' => Yii::getAlias('@httpProxyPort'),
-          'path' => Yii::getAlias('@httpProxyPath') . '/' . $webproxy->token . '/',
+          'path' => Yii::getAlias('@httpProxyPath'),
+          'token' => $token,
         ]);
       } else {
         throw new \yii\web\HttpException(500, 'This should not happen. You have seen nothing.');
