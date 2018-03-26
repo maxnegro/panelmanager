@@ -23,6 +23,7 @@ Yii::setAlias('storageUrl', env('STORAGE_URL'));
 Yii::setAlias('httpProxyHost', env('HTTPPROXY_HOST'));
 Yii::setAlias('httpProxyPort', env('HTTPPROXY_PORT'));
 Yii::setAlias('httpProxyPath', env('HTTPPROXY_PATH'));
+Yii::setAlias('httpProxyDomain', env('HTTPPROXY_DOMAIN'));
 
 Yii::setAlias('websocketProxyHost', env('WEBSOCKETPROXY_HOST'));
 Yii::setAlias('websocketProxyPort', env('WEBSOCKETPROXY_PORT'));

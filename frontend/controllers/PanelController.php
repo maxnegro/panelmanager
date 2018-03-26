@@ -78,7 +78,7 @@ class PanelController extends Controller
         //   'domain' => ".yii2-core.loc",
         // ]);
         // Yii::$app->response->cookies->add($cookie);
-        setcookie('webproxyAuth', $token, time() + 300, '/', '.yii2-core.loc');
+        setcookie('webproxyAuth', $token, time() + 300, '/', Yii::getAlias('@httpProxyDomain'));
 
         return $this->render('view-http', [
           'scheme' => Yii::getAlias('@httpProxyPort') == 443 ? 'https' : 'http',
