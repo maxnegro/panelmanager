@@ -32,6 +32,8 @@ $this->params['breadcrumbs'][] = Yii::t('backend', 'Update');
 
     <?= $form->field($user, 'roles')->checkboxList($roles) ?>
 
+    <?= $form->field($profile, 'theme')->dropDownList($themes) ?>
+
     <?= $form->field($profile, 'firstname')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($profile, 'lastname')->textInput(['maxlength' => true]) ?>

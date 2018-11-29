@@ -98,6 +98,12 @@ class UserController extends Controller
             'user' => $user,
             'profile' => $profile,
             'roles' => ArrayHelper::map(Yii::$app->authManager->getRoles(), 'name', 'name'),
+            'themes' => [
+              'default' => 'Default',
+              'enel' => 'Enel',
+              'teasm' => 'T&A Tecnologie e Ambiente',
+              'micropower' => 'Micropower',
+            ],
         ]);
     }
 

@@ -58,6 +58,15 @@ $config = [
         ],
         'urlManager' => require __DIR__ . '/_urlManager.php',
         'cache' => require __DIR__ . '/_cache.php',
+        // 'view' => [
+        //   'theme' => [
+        //     'basePath' => '@app/frontend/themes/basic',
+        //     'baseUrl' => '@web/themes/basic',
+        //     'pathMap' =>  [
+        //       '@app/frontend/views' => '@app/frontend/themes/basic'
+        //     ]
+        //   ],
+        // ],
     ],
     'as beforeAction' => [
         'class' => 'common\behaviors\LastActionBehavior',

@@ -142,3 +142,10 @@ div.required label:after {
 .article-item .article-text {
     margin-top: 7px;
 }
+
+/* Brand logo image */
+img.brand-logo {
+  height: 30px;
+  padding: 3px 10px;
+  margin-top: -5px;
+}

@@ -13,6 +13,9 @@ use lo\modules\noty\Wrapper;
 /* @var $content string */
 
 AppAsset::register($this);
+if (!Yii::$app->user->isGuest) {
+  $theme = empty( Yii::$app->user->identity->userProfile->theme ) ? 'default' : Yii::$app->user->identity->userProfile->theme;
+}
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -29,10 +32,10 @@ AppAsset::register($this);
 
 <div class="wrap">
     <?php NavBar::begin([
-        'brandLabel' => Yii::$app->name,
+        'brandLabel' => (Yii::$app->user->isGuest ? '' : '<img src="/static/themes/' . $theme . '/logo.png" class="pull-left brand-logo"> ') . Yii::$app->name,
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
-            'class' => 'navbar-inverse navbar-fixed-top',
+            'class' => 'navbar-default navbar-fixed-top',
         ],
     ]);
     $menuItems = [
