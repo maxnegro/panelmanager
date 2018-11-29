@@ -29,7 +29,7 @@
         "2amigos/yii2-selectize-widget": "*",
         "mihaildev/yii2-elfinder": "*",
         "loveorigami/yii2-notification-wrapper": "*",
-        "bower-asset/admin-lte": "*",
+        "bower-asset/admin-lte": "~2.4.0",
         "bower-asset/html5shiv": "*",
         "bower-asset/timecircles": "*",
         "bower-asset/font-awesome": "~4.7.0",
