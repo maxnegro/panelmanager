@@ -101,8 +101,10 @@ class UserController extends Controller
             'themes' => [
               'default' => 'Default',
               'enel' => 'Enel',
-              'teasm' => 'T&A Tecnologie e Ambiente',
+              'eni' => 'Eni',
               'micropower' => 'Micropower',
+              'petroltecnica' => 'Petroltecnica',
+              'teasm' => 'T&A Tecnologie e Ambiente',
             ],
         ]);
     }
